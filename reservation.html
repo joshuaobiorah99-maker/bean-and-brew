@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserve a Table | Bean & Brew Cafe</title>
+    <link rel="stylesheet" href="style.css">
+</head>    
+
+<body>
+
+   
+  <nav>
+
+  <button
+    id="menuToggle"
+    class="menu-toggle"
+    type="button"
+    aria-label="Open navigation menu"
+    aria-expanded="false"
+  >
+    ☰
+  </button>
+
+  <div id="navLinks" class="nav-links">
+
+    <a href="index.html#home">Home</a>
+
+    <a href="index.html#menu">Menu</a>
+
+    <a href="index.html#offers">Offers</a>
+
+    <!-- About dropdown -->
+    <div class="nav-dropdown">
+
+      <button class="dropdown-toggle" type="button">
+        About <span>▾</span>
+      </button>
+
+      <div class="dropdown-menu">
+        <a href="about.html">About Us</a>
+        <a href="about.html#gallery">Gallery</a>
+      </div>
+
+    </div>
+
+    <!-- Visit Us dropdown -->
+    <div class="nav-dropdown">
+
+      <button class="dropdown-toggle" type="button">
+        Visit Us <span>▾</span>
+      </button>
+
+      <div class="dropdown-menu">
+        <a href="reservation.html#reservation">Reservation</a>
+        <a href="reservation.html#contact">Contact</a>
+        <a href="reservation.html#faq">FAQ</a>
+        <a href="reservation.html#map">Map</a>
+      </div>
+
+    </div>
+
+    <button id="darkModeToggle" class="dark-mode-btn">
+      🌙 Dark Mode
+    </button>
+
+  </div>
+
+</nav>
+
+<main>
+    <section class="reservation" id="reservation" scroll-animate>
+
+    <div class="reservation-title">
+        <p>BOOK AHEAD</p>
+        <h2>Reserve a Table</h2>
+        <span></span>
+    </div>
+
+    <div class="reservation-box">
+
+        <form id="reservationForm" class="reservation-form">
+
+            <div class="form-row">
+                <input type="text" id="resName" placeholder="Full Name" required>
+                <input type="tel" id="resPhone" placeholder="Phone Number" required>
+            </div>
+
+            <div class="form-row">
+                <input type="date" id="resDate" required>
+                <input type="time" id="resTime" required>
+            </div>
+
+            <div class="form-row">
+                <select id="resGuests" required>
+                    <option value="">Number of Guests</option>
+                    <option value="1">1 guest</option>
+                    <option value="2">2 guests</option>
+                    <option value="3">3 guests</option>
+                    <option value="4">4 guests</option>
+                    <option value="5">5 guests</option>
+                    <option value="6+">6+ guests</option>
+                </select>
+            </div>
+
+            <textarea id="resNote" placeholder="Special requests (optional)" rows="3"></textarea>
+
+            <button type="submit" class="reservation-btn">Reserve on WhatsApp</button>
+
+            <p id="reservationError" class="reservation-error" style="display:none;"></p>
+
+        </form>
+
+    </div>
+
+</section>
+
+<section class="map-section">
+  <div class="map-title">
+    <p>COME VISIT US</p>
+    <h2>Find Bean & Brew Café</h2>
+  </div>
+
+  <iframe
+    src="https://www.google.com/maps?q=14%20Adeola%20Odeku%20Street%2C%20Victoria%20Island%2C%20Lagos&output=embed"
+    title="Bean and Brew Cafe location"
+    loading="lazy"
+    allowfullscreen
+  ></iframe>
+</section>
+
+<section class="contact" id="contact" scroll-animate>
+
+    <div class="contact-content">
+
+        <div class="contact-text">
+            <p class="contact-label">GET IN TOUCH</p>
+
+            <h2>We'd Love<br>To Hear From You.</h2>
+
+            <p>
+                Have a question, a special request, or just want to say hi?
+                Reach out any way that works for you — we usually reply within
+                the hour during opening times.
+            </p>
+
+            <div class="contact-list">
+
+                <div class="contact-row">
+                    <span class="contact-icon">📍</span>
+                    <div>
+                        <strong>Address</strong>
+                        <span>14 Adeola Odeku Street, Victoria Island, Lagos</span>
+                    </div>
+                </div>
+
+                <div class="contact-row">
+                    <span class="contact-icon">🕒</span>
+                    <div>
+                        <strong>Opening Hours</strong>
+                        <span>Mon – Fri: 8am – 8pm<br>Sat – Sun: 9am – 9pm</span>
+                    </div>
+                </div>
+
+                <div class="contact-row">
+                    <span class="contact-icon">📞</span>
+                    <div>
+                        <strong>Phone</strong>
+                        <span><a href="tel:+2347070332678">+234 707 033 2678</a></span>
+                    </div>
+                </div>
+
+                <div class="contact-row">
+                    <span class="contact-icon">✉️</span>
+                    <div>
+                        <strong>Email</strong>
+                        <span><a href="mailto:hello@beanandbrew.ng">hello@beanandbrew.ng</a></span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="contact-feature">
+
+            <span class="contact-badge">QUICK REPLY</span>
+
+            <h3>Chat With Us Now</h3>
+
+            <p>
+                Have a quick question or want to place an order? Message us
+                directly on WhatsApp and get a fast response.
+            </p>
+
+            <div class="contact-line"></div>
+
+            
+             <a   href="https://wa.me/2347070332678?text=Hello%20Bean%20%26%20Brew%2C%20I%20have%20a%20question."
+                class="whatsapp-link"
+                target="_blank"
+                rel="noopener"
+            >
+                💬 Chat on WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="faq" id="faq" scroll-animate>
+
+    <div class="faq-title">
+        <p>GOT QUESTIONS?</p>
+        <h2>Frequently Asked Questions</h2>
+        <span></span>
+    </div>
+
+    <div class="faq-list">
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                Do you offer delivery?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Yes — we deliver within Victoria Island and nearby areas. Place your order on WhatsApp and let us know your address; delivery usually takes 20–40 minutes.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                What payment methods do you accept?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>We accept cash, bank transfer, and card payment in-store. For WhatsApp orders, we'll share account details or a payment link when you check out.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                Do you have Wi-Fi?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Yes, free Wi-Fi is available for all customers. Ask any staff member for the password when you arrive.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                Can I customize my drink?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Absolutely. Let us know about milk alternatives, sugar levels, or extra shots — either in person or in the notes field when you check out online.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                Do you cater for allergies?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>We can accommodate most common allergies and intolerances. Please tell us when ordering so we can advise on the safest options.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                Are you open on public holidays?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Yes, with weekend hours (9am – 9pm). Any exceptions will be posted on our Instagram page ahead of time.</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+</main> 
+  <p id="success-message" style="display:none;"></p>
+  <script src="script.js" defer></script>
+
+  <button
+  id="backToTop"
+  class="back-to-top"
+  type="button"
+  aria-label="Back to top"
+>
+  ↑
+</button>
+</body>
+</html>

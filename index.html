@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bean & Brew Cafe</title>
+</head>
+<body>
+
+  <nav>
+
+  <button
+    id="menuToggle"
+    class="menu-toggle"
+    type="button"
+    aria-label="Open navigation menu"
+    aria-expanded="false"
+  >
+    ☰
+  </button>
+
+  <div id="navLinks" class="nav-links">
+
+    <a href="index.html#home">Home</a>
+
+    <a href="index.html#menu">Menu</a>
+
+    <a href="index.html#offers">Offers</a>
+
+    <!-- About dropdown -->
+    <div class="nav-dropdown">
+
+      <button class="dropdown-toggle" type="button">
+        About <span>▾</span>
+      </button>
+
+      <div class="dropdown-menu">
+        <a href="about.html">About Us</a>
+        <a href="about.html#gallery">Gallery</a>
+      </div>
+
+    </div>
+
+    <!-- Visit Us dropdown -->
+    <div class="nav-dropdown">
+
+      <button class="dropdown-toggle" type="button">
+        Visit Us <span>▾</span>
+      </button>
+
+      <div class="dropdown-menu">
+        <a href="reservation.html#reservation">Reservation</a>
+        <a href="reservation.html#contact">Contact</a>
+        <a href="reservation.html#faq">FAQ</a>
+        <a href="reservation.html#map">Map</a>
+      </div>
+
+    </div>
+
+    <button id="darkModeToggle" class="dark-mode-btn">
+      🌙 Dark Mode
+    </button>
+
+  </div>
+
+</nav>
+
+  <header id="home">
+     <img src="images/logo.png" alt="Bean & Brew Cafe Logo" class="site-logo">
+    <h1>Bean & Brew Cafe</h1>
+    <p>Fresh coffee. Great moments.</p>
+
+    <p id="openStatus" class="open-status" aria-live="polite"></p>
+  </header>
+
+    <section class="hero">
+    <div class="hero-content">
+
+        <p class="hero-small-text">WELCOME TO BEAN & BREW</p>
+
+        <h1>Freshly Brewed.<br>Made With Love.</h1>
+
+        <p class="hero-description">
+            Enjoy carefully crafted coffee, refreshing drinks, and delicious
+            treats made to brighten your day.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#menu" class="hero-btn primary-btn">
+                View Our Menu
+            </a>
+
+            <a href="#offers" class="hero-btn secondary-btn">
+                View Special Offers
+            </a>
+        </div>
+
+    </div>
+
+    <div class="hero-image">
+        <img
+        src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1000&q=80"
+        alt="Freshly brewed coffee"
+    >
+</div>
+        
+    </div>
+
+</section>
+    <section class="today-special">
+  <div class="special-image">
+    <img
+  src="https://images.unsplash.com/photo-1530373239216-42518e6b4063?auto=format&fit=crop&w=900&q=85"
+  alt="Iced mocha coffee topped with whipped cream and chocolate drizzle"
+>
+  </div>
+
+  <div class="special-content">
+    <p class="special-label">TODAY'S SPECIAL</p>
+    <h2>Chocolate Mocha</h2>
+    <p>
+      Rich espresso, smooth chocolate, and creamy steamed milk—
+      freshly made for your perfect coffee break.
+    </p>
+
+    <div class="special-price">
+      <span>₦3,500</span>
+      <small>Available today only</small>
+    </div>
+
+    <button type="button" class="special-btn" onclick="orderTodaySpecial()">
+  Order Now
+</button>
+  </div>
+</section>
+  </div>
+</section>
+
+ 
+    <main scroll-animate>
+      <section class="menu" id="menu" scroll-animate>
+        <h2>Our Menu</h2>
+
+         <div class="menu-search">
+        <input 
+            type="text" 
+            id="menuSearch" 
+            placeholder="🔍 Search our menu..."
+        >
+    </div>
+</div>
+
+
+
+        <div id="menuContainer">
+
+        <div class="menu-item" data-category="coffee">
+          <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80" alt="Espresso">
+          <div>
+            <h3>Espresso</h3>
+            <p>Rich and bold freshly brewed coffee.</p>
+          </div>
+          <div class="price-btn">
+          <span>&#8358;2,500</span>
+          <button class="order-btn" onclick="addToOrder('Espresso', 2500)">Add to Order</button>
+          </div>
+        </div>
+
+        <div class="menu-item" data-category="coffee">
+          <img src="https://images.unsplash.com/photo-1571565111863-9d496be534dd?auto=format&fit=crop&fm=jpg&q=80&w=800" alt="Cappuccino">
+          <div>
+            <span class="popular-badge">🔥 POPULAR</span>
+            <h3>Cappuccino</h3>
+            <p>Espresso with steamed milk and foam.</p>
+          </div>
+          <div class="price-btn">
+          <span>&#8358;3,000</span>
+          <button class="order-btn" onclick="addToOrder('Cappuccino', 3000)">Add to Order</button>
+          </div>
+        </div>
+
+        <div class="menu-item" data-category="coffee">
+          <img src="https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?auto=format&fit=crop&w=800&q=80" alt="Latte">
+          <div>
+            <span class="popular-badge">🔥 POPULAR</span>
+            <h3>Latte</h3>
+            <p>Smooth espresso blended with creamy milk.</p>
+          </div>
+          <div class="price-btn">
+          <span>&#8358;3,200</span>
+          <button class="favorite-btn" onclick="toggleFavorite('Latte', this)">
+    ♡
+</button>
+          <button class="order-btn" onclick="addToOrder('Latte', 3200)">Add to Order</button>
+          </div>
+        </div>
+
+        <div class="menu-item" data-category="coffee">
+          <img src="https://images.unsplash.com/photo-1572449043416-55f4685c9bb7?auto=format&fit=crop&fm=jpg&q=80&w=800" alt="Mocha">
+          <div>
+            <h3>Mocha</h3>
+            <p>A delicious combination of coffee and chocolate.</p>
+          </div>
+          <div class="price-btn">
+          <span>&#8358;3,500</span>
+          <button class="order-btn" onclick="addToOrder('Mocha', 3500)">Add to Order</button>
+          </div>
+        </div>
+
+        <h2 id="drinks">Our Drinks</h2>
+          <div class="menu-item" data-category="coffee">
+          <img src=" https://images.unsplash.com/photo-1600271886742-f049cd451bba" alt="Fresh Fruit Juice">
+          <div> 
+            <span class="popular-badge">🔥 POPULAR</span>
+            <h3>Fresh Fruit Juice</h3>
+            <p>Freshly squeezed juice made from seasonal fruits.</p>
+          </div>
+          <div class="price-btn">
+          <span>&#8358;1,500</span>
+           <button class="favorite-btn" onclick="toggleFavorite('Fresh Fruit JUice', this)">
+        ♡
+    </button>
+          <button class="order-btn" onclick="addToOrder('Fresh Fruit Juice', 1500)">Add to Order</button>
+          </div>
+        </div>
+
+         
+          <div class="menu-item" data-category="coffee">
+          <img src=" https://images.unsplash.com/photo-1556679343-c7306c1976bc" alt="Iced Tea">
+          <div>
+          <h3>Iced Tea</h3>
+          <p>Cool, refreshing, and lightly sweet.</p>
+          </div>
+          <div class="price-btn">
+          <span>&#8358;1,500</span>
+          <button class="order-btn" onclick="addToOrder('Iced Tea', 1500)">Add to Order</button>
+          </div>
+        </div>
+
+        
+          <div class="menu-item" data-category="coffee">
+          <img src=" https://images.unsplash.com/photo-1623065422902-30a2d299bbe4" alt="Mango Smothie">
+          <div>
+          <h3>Mango Smothie</h3>
+          <p>Creamy, fruity, and deliciously refreshing.</p>
+          </div>
+          <div class="price-btn">
+          <span>&#8358;2,000</span>
+          <button class="order-btn" onclick="addToOrder('Mango Smothie', 2000)">Add to Order</button>
+          </div>
+        </div>
+
+        <div class="menu-item" data-category="coffee">
+          <img src=" https://images.unsplash.com/photo-1553530666-ba11a7da3888" alt="Strawberry Smothie">
+          <div>
+          <h3>Strawberry smothie</h3>
+          <p>Sweet, creamy, and full of strawberry flavor.</p>
+          </div>
+          <div class="price-btn">
+          <span>&#8358;2,000</span>
+          <button class="order-btn" onclick="addToOrder('Strawberry smothie', 2000)">Add to Order</button>
+          </div>
+        </div>
+
+        
+        <div class="menu-item" data-category="coffee">
+          <img src=" https://images.unsplash.com/photo-1595854341625-f33ee10dbf94" alt="Fresh Lemonade">
+          <div>
+          <h3>Fresh Lemonade</h3>
+          <p>Zesty, refreshing, and perfectly sweet.</p>
+          </div>
+          <div class="price-btn">
+          <span>&#8358;1,500</span>
+          <button class="order-btn" onclick="addToOrder('Fresh Lemonade', 1500)">Add to Order</button>
+          </div>
+        </div>
+
+         <div class="menu-item" data-category="coffee">
+          <img src=" https://images.unsplash.com/photo-1572490122747-3968b75cc699" alt="Chocolate Milshake">
+          <div>
+          <h3>Chocolate Milshake</h3>
+          <p>Rich, creamy, and delightfully chocolatey</p>
+          </div>
+          <div class="price-btn">
+          <span>&#8358;2,500</span>
+          <button class="order-btn" onclick="addToOrder('Chocolate Milshake', 2500)">Add to Order</button>
+          </div>
+        </div>
+        </div>
+        </div>
+
+      </section>
+
+    </main>
+
+
+
+
+    <section class="order" id="order" scroll-animate>
+      <h2>Your Order</h2>
+      <ul id="order-list"></ul>
+      <p>Total: <span id="total">₦0</span></p>
+      <p id="success-message" style="display:none;"></p>
+      <button class="order-btn" onclick="clearOrder()">Clear Order</button>
+     <button onclick="openCheckout()" class="checkout-btn">
+    Proceed to Checkout
+</button>
+    </section>
+
+    
+              <!-- Special Offers -->
+<section class="offers" id="offers" scroll-animate>
+
+    <div class="offers-content">
+
+        <div class="offers-text">
+            <p class="offers-label">SPECIAL OFFERS</p>
+
+            <h2>Good Coffee.<br>Better Moments.</h2>
+
+            <p>
+                Enjoy carefully selected coffee and drinks at special prices.
+                Whether you're starting your morning or taking a break,
+                there's always something worth enjoying at Bean & Brew.
+            </p>
+
+            <div class="offer-details">
+                <div>
+                    <strong>10%</strong>
+                    <span>Morning Coffee</span>
+                </div>
+
+                <div>
+                    <strong>15%</strong>
+                    <span>Selected Drinks</span>
+                </div>
+
+                <div>
+                    <strong>20%</strong>
+                    <span>Weekend Specials</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="offers-feature">
+
+            <span class="offer-badge">FEATURED</span>
+
+            <h3>Bean & Brew Special</h3>
+
+            <p>
+                Make your coffee break special with our freshly brewed
+                favorites and refreshing drinks.
+            </p>
+
+            <div class="offer-line"></div>
+
+            <strong>Freshly brewed. Made for you.</strong>
+
+        </div>
+
+    </div>
+
+</section>
+   
+<!-- Customer Reviews -->
+<section class="reviews" scroll-animate>
+
+    <div class="reviews-title">
+        <p>WHAT OUR CUSTOMERS SAY</p>
+        <h2>Customer Reviews</h2>
+        <span></span>
+    </div>
+
+    <div class="review-box">
+
+        <div class="review">
+            <div class="stars">★★★★★</div>
+
+            <p id="reviewText">
+                "The coffee was amazing and the atmosphere was so relaxing!"
+            </p>
+
+            <h3 id="reviewName">— Happy Customer</h3>
+        </div>
+
+        <div class="review-buttons">
+            <button id="previousReview">❮</button>
+            <button id="nextReview">❯</button>
+        </div>
+
+    </div>
+
+</section>
+
+<div class="visit-card">
+
+
+    <h3>Visit Our Café</h3>
+
+    <p>
+        Come relax, enjoy freshly brewed coffee,
+        and make yourself at home.
+    </p>
+
+    <a
+  href="https://www.google.com/maps/search/?api=1&query=14%20Adeola%20Odeku%20Street%2C%20Victoria%20Island%2C%20Lagos"
+  class="location-btn"
+  target="_blank"
+  rel="noopener"
+>
+  📍 Get Directions
+</a>
+</div>
+
+
+
+    <footer>
+     <h3>Bean & Brew Cafe</h3>
+     <a href="#menu" class="footer-menu-link">Back to Menu ↑</a>
+     <p>&copy; 2026 Bean & Brew Cafe. All rights reserved.</p>
+     <p class="footer-tagline">Made with passion, coffee & creativity.</p>
+     <p class="footer-location">Proudly made in Nigeria 🇳🇬</p>
+     <div class="footer-socials">
+     <a href="https://www.instagram.com/Obiorah Joshua" target="_blank">Instagram</a>
+     <a href="https://www.facebook.com/beanandbrewcafe" target="_blank">Facebook</a>
+     <a href="https://www.tiktok.com/@beanandbrewcafe" target="_blank">TikTok</a>
+     </div>
+     <p class="designer-credit">Designed & Built by Obiorah Joshua</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+
+    <!-- Shopping Cart Button -->
+<button id="cartButton" class="cart-button">
+    🛒
+    <span id="cartCount">0</span>
+</button>
+
+<!-- Shopping Cart -->
+<div id="cartOverlay" class="cart-overlay"></div>
+
+<div id="shoppingCart" class="shopping-cart">
+
+    <div class="cart-header">
+        <h2>Your Cart</h2>
+
+        <button id="closeCart" class="close-cart">
+            ×
+        </button>
+    </div>
+
+    <div class="cart-items">
+        <ul id="cart-order-list"></ul>
+
+        <p id="emptyCart">
+            Your cart is empty.
+        </p>
+    </div>
+
+    <div class="cart-footer">
+
+        <div class="cart-total">
+            <span>Total</span>
+            <strong id="cart-total">₦0</strong>
+        </div>
+
+        <button onclick="clearOrder()" class="clear-cart-btn">
+            Clear Cart
+        </button>
+
+        <button onclick="orderOnWhatsApp()" class="checkout-btn">
+            Order on WhatsApp
+        </button>
+
+    </div>
+
+</div>
+
+<!-- Demo Checkout -->
+<div id="checkoutModal" class="checkout-modal">
+
+    <div class="checkout-box">
+
+        <button onclick="closeCheckout()" class="close-checkout">
+            ×
+        </button>
+
+        <h2>Checkout</h2>
+        <p>Complete your details to place your demo order.</p>
+
+        <input
+            type="text"
+            id="customerName"
+            placeholder="Full Name"
+        >
+
+        <input
+            type="tel"
+            id="customerPhone"
+            placeholder="Phone Number"
+        >
+
+        <select id="orderType">
+            <option value="">Choose Order Type</option>
+            <option value="Pickup">Pickup</option>
+            <option value="Delivery">Delivery</option>
+        </select>
+
+        <textarea
+            id="orderNote"
+            placeholder="Special instructions (optional)"
+            rows="3"
+        ></textarea>
+
+        <button onclick="placeDemoOrder()" class="place-order-btn">
+            Place Order
+        </button>
+
+    </div>
+
+</div>
+
+<!-- Order Receipt -->
+<div id="receiptModal" class="receipt-modal">
+
+    <div class="receipt-box">
+
+        <button onclick="closeReceipt()" class="close-receipt">
+            ×
+        </button>
+
+        <h2>Bean & Brew Café</h2>
+        <p class="receipt-title">Order Receipt</p>
+
+        <hr>
+
+        <p><strong>Order No:</strong> <span id="receiptOrderNumber"></span></p>
+        <p><strong>Date:</strong> <span id="receiptDate"></span></p>
+        <p><strong>Customer:</strong> <span id="receiptCustomer"></span></p>
+        <p><strong>Order Type:</strong> <span id="receiptOrderType"></span></p>
+
+        <hr>
+
+        <div id="receiptItems"></div>
+
+        <hr>
+
+        <div class="receipt-total">
+            <strong>Total</strong>
+            <strong id="receiptTotal">₦0</strong>
+        </div>
+
+        <button onclick="window.print()" class="print-receipt">
+            🖨️ Print Receipt
+        </button>
+
+    </div>
+
+</div>
+<button
+  id="backToTop"
+  class="back-to-top"
+  type="button"
+  aria-label="Back to top"
+>
+  ↑
+</button>
+
+
+</body>
+</html>
+

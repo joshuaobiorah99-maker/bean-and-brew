@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About our Cafe | Bean & Brew Cafe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  
+  <nav>
+
+  <button
+    id="menuToggle"
+    class="menu-toggle"
+    type="button"
+    aria-label="Open navigation menu"
+    aria-expanded="false"
+  >
+    ☰
+  </button>
+
+  <div id="navLinks" class="nav-links">
+
+    <a href="index.html#home">Home</a>
+
+    <a href="index.html#menu">Menu</a>
+
+    <a href="index.html#offers">Offers</a>
+
+    <!-- About dropdown -->
+    <div class="nav-dropdown">
+
+      <button class="dropdown-toggle" type="button">
+        About <span>▾</span>
+      </button>
+
+      <div class="dropdown-menu">
+        <a href="about.html">About Us</a>
+        <a href="about.html#gallery">Gallery</a>
+      </div>
+
+    </div>
+
+    <!-- Visit Us dropdown -->
+    <div class="nav-dropdown">
+
+      <button class="dropdown-toggle" type="button">
+        Visit Us <span>▾</span>
+      </button>
+
+      <div class="dropdown-menu">
+        <a href="reservation.html#reservation">Reservation</a>
+        <a href="reservation.html#contact">Contact</a>
+        <a href="reservation.html#faq">FAQ</a>
+        <a href="reservation.html#map">Map</a>
+      </div>
+
+    </div>
+
+    <button id="darkModeToggle" class="dark-mode-btn">
+      🌙 Dark Mode
+    </button>
+
+  </div>
+
+</nav>
+
+<main>
+<section class="about" id="about" scroll-animate>
+
+    <div class="about-content">
+
+        <div class="about-text">
+            <p class="about-label">OUR STORY</p>
+
+            <h2>Crafted With Care.<br>Served With Love.</h2>
+
+            <p>
+                Bean & Brew started with a simple idea: great coffee shouldn't
+                be rushed. Every cup is brewed to order using freshly roasted
+                beans, and every drink on our menu is made the same way we'd
+                make it for a friend.
+            </p>
+
+            <div class="about-details">
+                <div>
+                    <strong>2019</strong>
+                    <span>Est. Since</span>
+                </div>
+
+                <div>
+                    <strong>100%</strong>
+                    <span>Fresh Beans</span>
+                </div>
+
+                <div>
+                    <strong>5★</strong>
+                    <span>Customer Rated</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="about-feature">
+
+            <span class="about-badge">OUR PROMISE</span>
+
+            <h3>Quality You Can Taste</h3>
+
+            <p>
+                From the first sip to the last, we're committed to freshness,
+                consistency, and a warm experience every time you visit.
+            </p>
+
+            <div class="about-line"></div>
+
+            <strong>Freshly brewed. Always genuine.</strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="gallery" id="gallery" scroll-animate>
+
+    <div class="gallery-title">
+        <p>A LOOK INSIDE</p>
+        <h2>Our Gallery</h2>
+        <span></span>
+    </div>
+
+    <div class="gallery-grid">
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=700&q=80" alt="Freshly brewed coffee">
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=700&q=80" alt="Inside the cafe">
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=700&q=80" alt="Espresso shot">
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="https://images.unsplash.com/photo-1571565111863-9d496be534dd?auto=format&fit=crop&fm=jpg&q=80&w=700" alt="Cappuccino">
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=700&q=80" alt="Coffee beans">
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=700&q=80" alt="Cafe counter">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Gallery Lightbox -->
+<div id="lightboxOverlay" class="lightbox-overlay">
+    <button id="closeLightbox" class="close-lightbox" aria-label="Close image">×</button>
+    <img id="lightboxImage" src="" alt="">
+</div>
+</main> 
+  <p id="success-message" style="display:none;"></p>
+  <script src="script.js" defer></script>
+
+  <button
+  id="backToTop"
+  class="back-to-top"
+  type="button"
+  aria-label="Back to top"
+>
+  ↑
+</button>
+</body>
+</html>

@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bean & Brew Admin</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5eee9;
+            margin: 0;
+            padding: 30px;
+            color: #3e2723;
+        }
+
+        .admin-container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .admin-form {
+            display: grid;
+            gap: 15px;
+        }
+
+        input,
+        select,
+        button {
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background: #3e2723;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #6b4f47;
+        }
+
+        .menu-list {
+            margin-top: 30px;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            margin-bottom: 10px;
+            background: #f5eee9;
+            border-radius: 10px;
+        }
+
+        .delete-btn {
+            background: #a0522d;
+        }
+
+        .delete-btn:hover {
+            background: #7d3f24;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="admin-container">
+
+        <h1>☕ Bean & Brew Admin</h1>
+
+        <form class="admin-form" id="menuForm">
+
+            <input
+                type="text"
+                id="itemName"
+                placeholder="Menu item name"
+                required
+            >
+
+            <input
+                type="number"
+                id="itemPrice"
+                placeholder="Price"
+                required
+            >
+
+            <select id="itemCategory" required>
+                <option value="">Choose category</option>
+                <option value="coffee">Coffee</option>
+                <option value="juice">Juice</option>
+                <option value="tea">Tea</option>
+                <option value="smoothie">Smoothie</option>
+                <option value="lemonade">Lemonade</option>
+                <option value="milkshake">Milkshake</option>
+            </select>
+
+            <input
+                type="text"
+                id="itemImage"
+                placeholder="Image URL"
+            >
+
+            <input
+                type="text"
+                id="itemDescription"
+                placeholder="Description"
+            >
+
+            <button type="submit">
+                Add Menu Item
+            </button>
+
+        </form>
+
+        <div class="menu-list">
+
+            <h2>Current Menu</h2>
+
+            <div id="menuItems">
+                Loading menu...
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="admin.js"></script>
+
+</body>
+
+</html>
